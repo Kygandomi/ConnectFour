@@ -190,38 +190,21 @@ public class Board {
 		}
 		
 		//Second half of left Diagonals
-		/*for(int i = numRows-1; i >= 0; i--){
+		int z = 0;
+		for(int i = numRows-1; i >= 0; i--){
 			int count = 0;
 			int k = i;
-			int z = numCols-1;
-			for(int j = z; j >= 0; j--){
+			for(int j = numCols-1; j >z; j--){
 				if(this.board[k][j] == c.getShape()){
 					count++;
 					if(count == 4){
 						return true;
 					}
 				}
-				k++;
-			}
-			
-		}*/
-		
-		/*for(int i = 0; i < numRows; i++){
-			int count = 0;
-			int k = i;
-			int z = 1;
-			for(int j = z; j < numCols; j++){
-				System.out.println(k+" "+j);
-				if(this.board[k][j] == c.getShape()){
-					count++;
-					if(count == 4){
-						return true;
-					}
-				}
-				k++;
+				k--;
 			}
 			z++;	
-		}*/
+		}
 		
 		return false;
 	}
